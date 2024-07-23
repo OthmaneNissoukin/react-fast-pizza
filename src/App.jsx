@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter, createHashRouter } from "react-router-dom";
 import "./App.css";
 
 import Home from "./ui/Home";
@@ -11,7 +11,7 @@ import AppLayout from "./ui/AppLayout";
 import Cart from "./features/cart/Cart";
 import Error from "./ui/Error";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         element: <AppLayout />,
         errorElement: <Error />,
@@ -24,8 +24,8 @@ const router = createBrowserRouter([
             { path: "/order", element: <OrderItem /> },
         ],
     },
-    {
-        basename: "/react-fast-pizza"
+    { 
+        basename: "/react-fast-pizza",
     }
 ]);
 
