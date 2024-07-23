@@ -24,10 +24,13 @@ const router = createBrowserRouter([
             { path: "/order", element: <OrderItem /> },
         ],
     },
+    {
+        basename: "/react-fast-pizza"
+    }
 ]);
 
 function App() {
-    return <RouterProvider router={router}></RouterProvider>;
+    return <RouterProvider  router={router} ></RouterProvider>;
 }
 
 export default App;
